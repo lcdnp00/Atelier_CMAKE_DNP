@@ -96,7 +96,7 @@ jobs:
           ./src/calculator car 5
   Deploy:
     runs-on: ubuntu-latest
-    needs: operations
+    needs: Test_Add
     steps:
       - name: Compilation
         run: |
