@@ -28,8 +28,6 @@ jobs:
           cmake ..
           make
           ./src/calculator add 10 5
-      - name: Test fonction sub
-        run: |
           ./src/calculator sub 3 -2
   Deploy:
     runs-on: ubuntu-latest
