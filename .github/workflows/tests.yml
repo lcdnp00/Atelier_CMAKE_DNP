@@ -75,7 +75,7 @@ jobs:
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: test-add-report
+          name: test-sub-report
           path: build/report.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
@@ -111,7 +111,7 @@ jobs:
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: test-add-report
+          name: test-mul-report
           path: build/report.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
@@ -147,7 +147,7 @@ jobs:
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: test-add-report
+          name: test-div-report
           path: build/report.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
@@ -183,7 +183,7 @@ jobs:
       - name: Upload report as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: test-add-report
+          name: test-car-report
           path: build/report.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
