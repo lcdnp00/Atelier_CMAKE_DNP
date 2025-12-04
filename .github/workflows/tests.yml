@@ -19,7 +19,6 @@ jobs:
     needs: Compilation
     concurrency:
       group: operations
-      cancel-in-progress: true
     steps:
       - name: Test fonction add
         run: |
@@ -36,7 +35,6 @@ jobs:
     needs: Compilation
     concurrency:
       group: operations
-      cancel-in-progress: true
     steps:
       - name: Test fonction sub
         run: |
