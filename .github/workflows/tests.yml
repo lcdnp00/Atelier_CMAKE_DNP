@@ -27,8 +27,8 @@ jobs:
           cd ./$last_directory
           mkdir build
           cd build
-          # cmake ..
-          # make
+          cmake ..
+          make
           ./src/calculator add 10 5
   Test_Sub:
     runs-on: ubuntu-latest
@@ -38,14 +38,13 @@ jobs:
     steps:
       - name: Test fonction sub
         run: |
-          pwd
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
           cd ./$last_directory
           mkdir build
           cd build
-          # cmake ..
-          # make
+          cmake ..
+          make
           ./src/calculator add 3 -2
   Test_Mul:
     runs-on: ubuntu-latest
@@ -55,14 +54,13 @@ jobs:
     steps:
       - name: Test fonction mul
         run: |
-          pwd
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
           cd ./$last_directory
           mkdir build
           cd build
-          # cmake ..
-          # make
+          cmake ..
+          make
           ./src/calculator mul 5 5
   Test_Div:
     runs-on: ubuntu-latest
@@ -72,14 +70,13 @@ jobs:
     steps:
       - name: Test fonction div
         run: |
-          pwd
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
           cd ./$last_directory
           mkdir build
           cd build
-          # cmake ..
-          # make
+          cmake ..
+          make
           ./src/calculator div 1 5
   Test_Car:
     runs-on: ubuntu-latest
@@ -89,12 +86,17 @@ jobs:
     steps:
       - name: Test fonction car
         run: |
-          pwd
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
           cd ./$last_directory
           mkdir build
           cd build
-          # cmake ..
-          # make
+          cmake ..
+          make
           ./src/calculator car 5
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compilation
+        run: |
+          echo 'Déploiement de la solution !'
