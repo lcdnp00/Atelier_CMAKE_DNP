@@ -38,9 +38,10 @@ jobs:
     steps:
       - name: Test fonction sub
         run: |
+          pwd
           last_directory=$(basename ${{ runner.workspace }})
           git clone https://github.com/${{ github.repository }}.git
-          #cd ./$last_directory
+          cd ./$last_directory
           mkdir build
           cd build
           cmake ..
