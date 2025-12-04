@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
-          path: build/report.txt # <-- le fichier à récupérer
+          path: build/report_add.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
       - name: Job summary (facultatif mais pratique)
@@ -48,7 +48,7 @@ jobs:
           echo "### Résultat du test *add*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_add.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Test_Sub:
     runs-on: ubuntu-latest
@@ -76,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
-          path: build/report.txt # <-- le fichier à récupérer
+          path: build/report_sub.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
       - name: Job summary (facultatif mais pratique)
@@ -84,7 +84,7 @@ jobs:
           echo "### Résultat du test *sub*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_sub.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Test_Mul:
     runs-on: ubuntu-latest
@@ -112,7 +112,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
-          path: build/report.txt # <-- le fichier à récupérer
+          path: build/report_mul.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
       - name: Job summary (facultatif mais pratique)
@@ -120,7 +120,7 @@ jobs:
           echo "### Résultat du test *mul*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_mul.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Test_Div:
     runs-on: ubuntu-latest
@@ -148,7 +148,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
-          path: build/report.txt # <-- le fichier à récupérer
+          path: build/report_div.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
       - name: Job summary (facultatif mais pratique)
@@ -156,7 +156,7 @@ jobs:
           echo "### Résultat du test *div*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_div.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Test_Car:
     runs-on: ubuntu-latest
@@ -184,7 +184,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-add-report
-          path: build/report.txt # <-- le fichier à récupérer
+          path: build/report_car.txt # <-- le fichier à récupérer
           retention-days: 14 # optionnel
 
       - name: Job summary (facultatif mais pratique)
@@ -192,7 +192,7 @@ jobs:
           echo "### Résultat du test *car*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          cat build/report_car.txt >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
   Deploy:
     runs-on: ubuntu-latest
